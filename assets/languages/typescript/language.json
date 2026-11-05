@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "id": "typescript",
+  "name": "TypeScript",
+  "scope": "source.ts",
+  "files": {
+    "extensions": ["ts", "mts", "cts"]
+  },
+  "comments": {
+    "line": "//",
+    "block": ["/*", "*/"]
+  },
+  "syntax": "builtin:JavaScript",
+  "tree_sitter": {
+    "grammar": "builtin:typescript",
+    "highlights": ["builtin:javascript/highlights", "builtin:typescript/highlights"]
+  },
+  "lsp": {
+    "language_id": "typescript",
+    "server": "typescript",
+    "command": ["typescript-language-server", "--stdio"],
+    "initialization_options": {},
+    "root_markers": ["tsconfig.json", "jsconfig.json", "package.json"]
+  }
+}

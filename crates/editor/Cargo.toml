@@ -1,0 +1,32 @@
+[package]
+name = "orlo-editor"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Text buffers, selections, undo, editing, and search for Orlo"
+[features]
+test-support = ["orlo-project/test-support", "orlo-config/test-support", "orlo-utils/test-support"]
+[dependencies]
+orlo-project = { path = "../project" }
+orlo-config = { path = "../config" }
+orlo-utils = { path = "../utils" }
+base64.workspace = true
+fancy-regex.workspace = true
+ignore.workspace = true
+libc.workspace = true
+md-5.workspace = true
+regex-automata.workspace = true
+regex-syntax.workspace = true
+ropey.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha1.workspace = true
+sha2.workspace = true
+unicode-normalization.workspace = true
+unicode-segmentation.workspace = true
+[dev-dependencies]
+gpui = { workspace = true, features = ["test-support"] }
+orlo-syntax = { path = "../syntax", features = ["test-support"] }
+orlo-project = { path = "../project", features = ["test-support"] }
+orlo-config = { path = "../config", features = ["test-support"] }
+orlo-utils = { path = "../utils", features = ["test-support"] }

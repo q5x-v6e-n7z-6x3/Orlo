@@ -1,0 +1,8 @@
+{
+  "schema": 1,
+  "id": "trap",
+  "name": "Trap",
+  "scope": "source.trap",
+  "files": { "extensions": ["trap"] },
+  "tree_sitter": { "grammar": "grammar.wasm", "symbol": "trap", "highlights": ["queries/highlights.scm"] }
+}

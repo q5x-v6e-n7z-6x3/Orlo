@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "id": "jsx",
+  "name": "JavaScript",
+  "hidden": true,
+  "scope": "source.js",
+  "files": {
+    "extensions": ["jsx"]
+  },
+  "comments": {
+    "line": "//",
+    "block": ["/*", "*/"]
+  },
+  "syntax": "builtin:JavaScript",
+  "tree_sitter": {
+    "grammar": "builtin:javascript",
+    "highlights": ["builtin:javascript/highlights", "builtin:javascript/jsx"]
+  },
+  "lsp": {
+    "language_id": "javascriptreact",
+    "server": "typescript",
+    "command": ["typescript-language-server", "--stdio"],
+    "initialization_options": {},
+    "root_markers": ["tsconfig.json", "jsconfig.json", "package.json"]
+  }
+}

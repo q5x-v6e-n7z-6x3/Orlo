@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "id": "python",
+  "name": "Python",
+  "scope": "source.python",
+  "files": {
+    "extensions": ["py", "pyw", "pyi"]
+  },
+  "comments": {
+    "line": "#"
+  },
+  "syntax": "builtin:Python",
+  "tree_sitter": {
+    "grammar": "builtin:python",
+    "highlights": ["builtin:python/highlights"]
+  },
+  "lsp": {
+    "language_id": "python",
+    "server": "python",
+    "command": ["pylsp"],
+    "initialization_options": {},
+    "root_markers": ["pyproject.toml", "setup.py", "setup.cfg", "requirements.txt"]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "id": "ruby",
+  "name": "Ruby",
+  "scope": "source.ruby",
+  "files": {
+    "extensions": ["rb", "rake", "gemspec"],
+    "names": ["Gemfile", "Rakefile", "Guardfile"]
+  },
+  "comments": {
+    "line": "#"
+  },
+  "syntax": "builtin:Ruby",
+  "tree_sitter": {
+    "grammar": "builtin:ruby",
+    "highlights": ["builtin:ruby/highlights"]
+  },
+  "lsp": {
+    "language_id": "ruby",
+    "server": "ruby",
+    "command": ["ruby-lsp"],
+    "initialization_options": {},
+    "root_markers": ["Gemfile", "Rakefile"]
+  }
+}

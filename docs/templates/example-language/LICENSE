@@ -1,0 +1,11 @@
+Say here where each file in this folder comes from: which files are your own, and for anything
+derived from someone else's work (a grammar, its queries, an editor's syntax file) the
+repository, the revision, the files, and the licence. Then paste each licence's full text below.
+
+Example:
+
+  grammar.wasm is built from https://github.com/<owner>/tree-sitter-<language> at revision
+  <commit> (MIT). queries/highlights.scm is adapted from that repository's
+  queries/highlights.scm. language.json and Example.sublime-syntax are our own.
+
+  <the full MIT licence text of tree-sitter-<language>, with its copyright line>

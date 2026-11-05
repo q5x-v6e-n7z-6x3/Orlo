@@ -1,0 +1,90 @@
+%YAML 1.2
+---
+name: FreeBASIC
+file_extensions: [bas, bi]
+scope: source.freebasic
+contexts:
+  main:
+    - match: '(?<!##)_(?![A-Za-z0-9_]|##)'
+      scope: punctuation.separator.continuation.freebasic
+      push:
+        - meta_content_scope: comment.line.continuation.freebasic
+        - match: $\n?
+          pop: true
+    - include: comments
+    - include: strings
+    - match: '(?i:#\s*(?:assert|cmdline|define|else|elseif|elseifdef|elseifndef|endif|endmacro|error|if|ifdef|ifndef|inclib|include|lang|libpath|line|macro|pragma|print|undef)\b)'
+      scope: keyword.control.import.freebasic
+    - match: '(?i:\b(?:any|boolean|byte|ubyte|short|ushort|integer|uinteger|long|ulong|longint|ulongint|single|double|string|zstring|wstring|object)\b)'
+      scope: storage.type.freebasic
+    - match: '(?i:\b(?:dim|redim|var|const|static|shared|common|extern|public|private|protected|export|import|declare|alias|lib|as|byref|byval|cdecl|pascal|stdcall|thiscall|fastcall|naked|virtual|override|abstract|overload|preserve|ptr|pointer|once)\b)'
+      scope: storage.modifier.freebasic
+    - match: '(?i:\b(?:if|then|else|elseif|endif|end|select|case|to|for|next|step|each|in|do|loop|until|while|wend|exit|continue|return|goto|gosub|on|resume|error|with|scope|let|call|function|sub|constructor|destructor|property|operator|type|union|enum|namespace|using|extends|base|this|asm|data|read|restore|option)\b)'
+      scope: keyword.control.freebasic
+    - match: '(?i:\b(?:and|andalso|or|orelse|xor|not|mod|shl|shr|eqv|imp|is|new|delete|sizeof|typeof|offsetof|defined)\b)'
+      scope: keyword.operator.freebasic
+    - match: '(?i:\b(?:true|false)\b)'
+      scope: constant.language.freebasic
+    - match: '(?i:(?<![\w.])(?:&h[0-9a-f]+|&b[01]+|&o?[0-7]+)(?:ull|ul|ll|u|l|[%&])?(?!\w)|(?<![\w.])(?:[0-9]+(?:\.[0-9]*)?|\.[0-9]+)(?:[de][+-]?[0-9]*)?(?:ull|ul|ll|u|l|f|d|[%&!#])?(?!\w))'
+      scope: constant.numeric.freebasic
+    - match: '(?i:\b(?:print|input|sleep|cls|screen|screenres|locate|color|beep|open|close|get|put|seek|len|str|val|chr|asc|left|right|mid|trim|ltrim|rtrim|ucase|lcase|instr|space|abs|sin|cos|tan|sqr|log|exp|int|fix|rnd|randomize|allocate|callocate|reallocate|deallocate|peek|poke|swap|lbound|ubound|erase|cast|cptr|cint|cstr|cdbl|csng)\b\$?)'
+      scope: support.function.freebasic
+    - match: '\b[A-Za-z_][A-Za-z_0-9]*[$%&!#]?(?=\s*\()'
+      scope: entity.name.function.freebasic
+    - match: '\b[A-Za-z_][A-Za-z_0-9]*[$%&!#]?'
+      scope: variable.other.freebasic
+    - match: '[+*/\\^=<>@&-]'
+      scope: keyword.operator.freebasic
+    - match: '[(){}\[\]]'
+      scope: punctuation.section.freebasic
+    - match: '[,;:.]'
+      scope: punctuation.separator.freebasic
+
+  comments:
+    - match: "/'"
+      scope: punctuation.definition.comment.begin.freebasic
+      push: block-comment
+    - match: "'"
+      scope: punctuation.definition.comment.freebasic
+      push:
+        - meta_scope: comment.line.apostrophe.freebasic
+        - match: $\n?
+          pop: true
+    - match: '(?i:\brem\b)'
+      scope: punctuation.definition.comment.freebasic
+      push:
+        - meta_scope: comment.line.rem.freebasic
+        - match: $\n?
+          pop: true
+
+  block-comment:
+    - meta_scope: comment.block.freebasic
+    - match: "/'"
+      scope: punctuation.definition.comment.begin.freebasic
+      push: block-comment
+    - match: "'/"
+      scope: punctuation.definition.comment.end.freebasic
+      pop: true
+
+  strings:
+    - match: '!"'
+      scope: punctuation.definition.string.begin.freebasic
+      push:
+        - meta_scope: string.quoted.double.freebasic
+        - match: '\\(?:[0-9]{1,3}|&[hH][0-9A-Fa-f]{1,2}|&[oO][0-7]{1,3}|&[bB][01]{1,8}|u[0-9A-Fa-f]{4}|U[0-9A-Fa-f]{8}|.)'
+          scope: constant.character.escape.freebasic
+        - include: string-end
+    - match: '\$?"'
+      scope: punctuation.definition.string.begin.freebasic
+      push:
+        - meta_scope: string.quoted.double.freebasic
+        - include: string-end
+
+  string-end:
+    - match: '""'
+      scope: constant.character.escape.freebasic
+    - match: '"'
+      scope: punctuation.definition.string.end.freebasic
+      pop: true
+    - match: $\n?
+      pop: true

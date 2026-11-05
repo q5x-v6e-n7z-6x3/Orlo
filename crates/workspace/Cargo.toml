@@ -1,0 +1,25 @@
+[package]
+name = "orlo-workspace"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Workspace layout, session persistence, and launch coordination for Orlo"
+
+[features]
+test-support = ["orlo-editor/test-support", "orlo-project/test-support", "orlo-utils/test-support"]
+
+[dependencies]
+orlo-editor = { path = "../editor" }
+orlo-project = { path = "../project" }
+orlo-config = { path = "../config" }
+orlo-utils = { path = "../utils" }
+libc.workspace = true
+ropey.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+
+[dev-dependencies]
+orlo-editor = { path = "../editor", features = ["test-support"] }
+orlo-project = { path = "../project", features = ["test-support"] }
+orlo-utils = { path = "../utils", features = ["test-support"] }

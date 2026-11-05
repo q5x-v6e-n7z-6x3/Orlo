@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "id": "kotlin",
+  "name": "Kotlin",
+  "scope": "source.kotlin",
+  "files": {
+    "extensions": ["kt", "kts"]
+  },
+  "comments": {
+    "line": "//",
+    "block": ["/*", "*/"]
+  },
+  "tree_sitter": {
+    "grammar": "builtin:kotlin",
+    "highlights": ["builtin:kotlin/highlights"]
+  },
+  "lsp": {
+    "language_id": "kotlin",
+    "server": "kotlin",
+    "command": ["kotlin-lsp", "--stdio"],
+    "initialization_options": {},
+    "root_markers": ["settings.gradle.kts", "settings.gradle", "build.gradle.kts", "build.gradle", "pom.xml"]
+  }
+}

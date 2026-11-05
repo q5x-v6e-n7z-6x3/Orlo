@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "id": "php",
+  "name": "PHP",
+  "scope": "source.php",
+  "files": {
+    "extensions": ["php", "phtml", "php3", "php4", "php5", "php7", "php8"]
+  },
+  "comments": {
+    "line": "//",
+    "block": ["/*", "*/"]
+  },
+  "syntax": "builtin:PHP",
+  "tree_sitter": {
+    "grammar": "builtin:php",
+    "highlights": ["builtin:php/highlights", "queries/embedded.scm"]
+  },
+  "lsp": {
+    "language_id": "php",
+    "server": "php",
+    "command": ["intelephense", "--stdio"],
+    "initialization_options": {},
+    "root_markers": ["composer.json"]
+  }
+}

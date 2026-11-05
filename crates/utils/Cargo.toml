@@ -1,0 +1,13 @@
+[package]
+name = "orlo-utils"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Shared text algorithms, fuzzy matching, and support paths for Orlo"
+
+[features]
+test-support = []
+
+[dependencies]
+libc.workspace = true
+ropey.workspace = true

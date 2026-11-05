@@ -1,0 +1,42 @@
+[package]
+name = "orlo-syntax"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Language services, syntax highlighting, bundled grammars, spelling, and LSP for Orlo"
+
+[features]
+test-support = []
+
+[dependencies]
+orlo-editor = { path = "../editor" }
+orlo-project = { path = "../project" }
+orlo-config = { path = "../config" }
+orlo-utils = { path = "../utils" }
+gpui.workspace = true
+libc.workspace = true
+regex-automata.workspace = true
+ropey.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+syntect.workspace = true
+tree-sitter.workspace = true
+tree-sitter-bash.workspace = true
+tree-sitter-c.workspace = true
+tree-sitter-c-sharp.workspace = true
+tree-sitter-cpp.workspace = true
+tree-sitter-go.workspace = true
+tree-sitter-hcl.workspace = true
+tree-sitter-java.workspace = true
+tree-sitter-javascript.workspace = true
+tree-sitter-kotlin-ng.workspace = true
+tree-sitter-php.workspace = true
+tree-sitter-python.workspace = true
+tree-sitter-ruby.workspace = true
+tree-sitter-rust.workspace = true
+tree-sitter-swift.workspace = true
+tree-sitter-typescript.workspace = true
+unicode-segmentation.workspace = true
+
+[build-dependencies]
+syntect.workspace = true

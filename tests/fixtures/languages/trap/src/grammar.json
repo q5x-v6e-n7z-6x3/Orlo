@@ -1,0 +1,13 @@
+{
+  "name": "trap",
+  "rules": {
+    "document": {"type": "REPEAT", "content": {"type": "SYMBOL", "name": "word"}},
+    "word": {"type": "CHOICE", "members": [{"type": "PATTERN", "value": "[a-z]+"}, {"type": "SYMBOL", "name": "boom"}]}
+  },
+  "extras": [{"type": "PATTERN", "value": "\\s"}],
+  "conflicts": [],
+  "precedences": [],
+  "externals": [{"type": "SYMBOL", "name": "boom"}],
+  "inline": [],
+  "supertypes": []
+}

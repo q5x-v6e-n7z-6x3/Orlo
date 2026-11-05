@@ -1,0 +1,16 @@
+[package]
+name = "orlo-git"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Git repository, index, worktree, and text change backend for Orlo"
+
+[dependencies]
+# libgit2 built in: a Homebrew libgit2 found at build time would be linked instead, which the
+# signed app (Hardened Runtime) refuses to load, and other Macs do not have
+git2 = { version = "=0.20.4", default-features = false, features = ["vendored-libgit2"] }
+ropey.workspace = true
+orlo-utils = { path = "../utils" }
+
+[dev-dependencies]
+orlo-utils = { path = "../utils", features = ["test-support"] }

@@ -1,0 +1,25 @@
+[package]
+name = "orlo-project"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Project roots, documents, filesystem operations, and watchers for Orlo"
+
+[features]
+test-support = ["orlo-utils/test-support"]
+
+[dependencies]
+encoding_rs.workspace = true
+ignore.workspace = true
+libc.workspace = true
+ropey.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2.workspace = true
+unicode-segmentation.workspace = true
+orlo-config = { path = "../config" }
+orlo-git = { path = "../git" }
+orlo-utils = { path = "../utils" }
+
+[dev-dependencies]
+orlo-utils = { path = "../utils", features = ["test-support"] }

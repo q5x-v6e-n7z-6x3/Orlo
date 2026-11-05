@@ -1,0 +1,270 @@
+path	baseline_lines	final_lines	final_sha256	review_record
+.github/workflows/ci.yml	36	42	e2edd386ed215c030e749c7291f9955ab77d558c36449093c29debb911599714	parent application, build and integration
+Cargo.lock	7934	7934	895e4dfaa4223cd772e490b207d4fb3826efeabb0c4d60bc7109aaddd68c53d3	parent application, build and integration
+Cargo.toml	63	63	9025f6d29d1c639fdcd9c39de58378d5caad5d6b75429128247d97488f784a6c	parent application, build and integration
+benches/editing/mod.rs	228	228	482b75c15678764f13df8d3949a0d59f2dd852cb514374386d2a25b963b0a441	parent application, build and integration
+benches/filesystem/mod.rs	184	219	e8afb1b2325f205ce7990ceaca44efdbb84350a102ba7ed85ca2f1c0d7ae985a	parent application, build and integration
+benches/mod.rs	136	136	a0b1fda63b2553de32cb68ab8b238ae12c71f1360cb3632a19ee153009696987	parent application, build and integration
+benches/rendering/mod.rs	567	567	5a680dda5267729f9acebe339b448a45ec3bbf9af56a2ce7b5af9816114eb2c4	parent application, build and integration
+crates/app/Cargo.toml	23	23	ff74a7bf348c3677ac28b8dc928ddf7a32b6a777f6e3eafe90a8a86bebd8b0ef	parent application, build and integration
+crates/app/src/actions/mod.rs	9	9	9f9d3fd2d8fd3a2f907cf867221143610f82b767ce87fdf1cf2e34b8869eac8e	parent application, build and integration
+crates/app/src/main.rs	8	8	b4b1a4a6c5502272c7b46a49fe6fc13858ae6944a352111134fdd3bc696bdbb6	parent application, build and integration
+crates/app/src/platform/mod.rs	4	4	e9d1396a05221505861949b05ca02e0a7926c862faa7a21fe19fe7030172639d	parent application, build and integration
+crates/app/src/startup/mod.rs	137	137	e243ca7c5e419f45527f74ccea8a9613aa5dd0c3e396ac9ab60ce4390afd1350	parent application, build and integration
+crates/app/src/window/mod.rs	30	30	961a07fdf5fb8fbb90de280dffd16afb7982644ff5c56e744576b7d30926ad5b	parent application, build and integration
+crates/config/Cargo.toml	22	22	57e1be32d713bd51f51da54dd3496d97911f4fd2638a8c52cbfea74779a56595	core + final patch review
+crates/config/src/keybindings/mod.rs	21	21	7d22e5292e348010b2f60ebd5b3f4260a4752d6a80ce6632e4cf44f0f7fd7607	core + final patch review
+crates/config/src/lib.rs	9	9	b6ee0cdd30bd76c9f496b0b1eaf87d488ed88ca9de419344d5b43854fab9dcc7	core + final patch review
+crates/config/src/persistence/automation.rs	808	808	1f996b5a317229a45e1a9a33ae05ff7f62e035d4b7486a7496aefeeb915a2dab	core + final patch review
+crates/config/src/persistence/mod.rs	3	3	eae329c688db09186aea3489b8288cbd0530b3339721eda962ae80a17b3d9e93	core + final patch review
+crates/config/src/settings/editorconfig.rs	488	488	2956637a652f9c8b3240b4d7f1219c407da6b8abd6d155c1f334c409af5d5afb	core + final patch review
+crates/config/src/settings/mod.rs	1090	1090	e0c1301e7e09f01a575a024d0d7510c70e3f655c90a3fa89b042977e16012569	core + final patch review
+crates/config/src/settings/selector.rs	585	585	b7d57c26e8a09fae89ea3dcc22a2a757ef77a3209026905a418e6950bffaac65	core + final patch review
+crates/config/src/settings/server.rs	20	20	6f592b74f820a0fe758d4f397622b15e033b953526b4084ab8d6711bb63e8af9	core + final patch review
+crates/config/src/themes/assets.rs	120	120	89ec6460dfb36c99ef79691f6c37939bb74aefdea15141005d947dcbc23419dd	core + final patch review
+crates/config/src/themes/mod.rs	503	503	d339469935b449d71b56aea726fb4aba3f48b2d45e8fa3505b5c03c458d730a6	core + final patch review
+crates/editor/Cargo.toml	32	32	08f5e5bc5fc1be0b745f2c68e646f9fcf4c4a4f76cfb46ed5616812c8f23329e	core + final patch review
+crates/editor/src/buffer/changes.rs	189	189	f941c4863cd60d8c2dca211a814094774747b7927fed2710d623cb64e39e90f7	core + final patch review
+crates/editor/src/buffer/mod.rs	331	331	dc14387fff70f46f78b22e5e1ba8e0ebb345db105d14497c45c677e2d9f0fa79	core + final patch review
+crates/editor/src/buffer/persistence.rs	50	50	81ad4dc5c9917369ba570d5dbd277b4b4f9091b5e78215c14b0ea3fcf3e0fd3e	core + final patch review
+crates/editor/src/buffer/position.rs	116	116	d4c3239a79d445843b521ed2963c4cdbdf2bd4f65c9e29ea0221ef9fb65d1bca	core + final patch review
+crates/editor/src/buffer/save.rs	225	225	e6dbda09ed7f081c547cadc4dfd6ff81613d8a593418c630e188d2bb2ffe5948	core + final patch review
+crates/editor/src/buffer/state.rs	992	1003	6e765a03fadcf05aecf9fdd0d3c7888ac309376885b79b1104198db0ac2470e4	core + final patch review
+crates/editor/src/buffer/tests/changes.rs	253	253	8f1058974e032fa000b2985cc568725042a69cd5a19219831bed9517a5d8a151	core + final patch review
+crates/editor/src/buffer/tests/columns.rs	321	336	9f6c2bfc2de084da15965b8150e93d1c065d40f47ab0ee292b9041caa1310f7c	core + final patch review
+crates/editor/src/buffer/tests/drag_tests.rs	156	156	aa6fb0347ea7301b36210532fdc4c4e8cf9898d5d354450f03f0cd4f20fdd6d2	core + final patch review
+crates/editor/src/buffer/tests/editing.rs	216	216	6e2faad394d43ef5b57f575b3ebdc7f518be464e9152e270f59ef842d4b95936	core + final patch review
+crates/editor/src/buffer/tests/editor_feature_tests.rs	369	369	1300b83ab214f8e9dea26c67cdef5a306c83efd42077b5d32d67090a798dce41	core + final patch review
+crates/editor/src/buffer/tests/files.rs	854	843	a54908b2c327621f3ea1fdb0fdbbca0b566301145fad5c937d0cf925ed1141d6	core + final patch review
+crates/editor/src/buffer/tests/lines.rs	68	68	6f8e6a7c1081a2d74510ee98542e5ead6094aa5f2257f62d6d0c7ba9e59ba170	core + final patch review
+crates/editor/src/buffer/tests/marking_tests.rs	156	200	ceea0b667b5e2a6abc9b6e1b91e0d3c970ab295937e40274b523ad1e38a80471	core + final patch review
+crates/editor/src/buffer/tests/mod.rs	219	234	e349a4ecda729b00edd34ead4d005873b7290561f75a0cd37a1465e880afdade	core + final patch review
+crates/editor/src/buffer/tests/motion.rs	163	163	6beb34eb30b6e1db821f9b83c27d7200b9be9a1dc056dd9b176accbfc57e75df	core + final patch review
+crates/editor/src/buffer/tests/multi_caret.rs	1313	1354	6b6e672d2c69acf86cea89057b6dc74167408e1eb4a2361cf2959fb5a76d67cf	core + final patch review
+crates/editor/src/buffer/tests/positions.rs	48	60	f57e6bd2e0e68f55f1baf8b69aed88dcde7922cf290cdd59e81e741d8466437f	core + final patch review
+crates/editor/src/buffer/tests/preferred_x.rs	150	150	dd4830c69dd6ef0fc1c84726817aa1ca3eccc9d50e62c0d045f7c2f8b8e4ac44	core + final patch review
+crates/editor/src/buffer/tests/saving.rs	207	207	b8aced50158e93f85385ff2843a6001286729c8b82fb602d8f31dd647fd131ea	core + final patch review
+crates/editor/src/buffer/tests/search.rs	151	151	24cdd68d63fdd4186ca12f8ef25b333d3142e1588c4a6d5a75fd654aef7f7f3b	core + final patch review
+crates/editor/src/buffer/tests/search_workflow_tests.rs	133	161	9ebe976774ba22f3cb57ef69a57d7e1d13e594db68a1a4b04c6b21c7d48b0456	core + final patch review
+crates/editor/src/buffer/tests/selections.rs	321	321	1c0d0d4858e345abcafd8de3f2d2042a92670fc6c8a44ec82d436dc8da2250ee	core + final patch review
+crates/editor/src/buffer/tests/shared.rs	495	508	554fe0bf38b773a0e696579dc0eecebe87767f7b07fa9ccd843f2dd1e4b7ae76	core + final patch review
+crates/editor/src/buffer/tests/snippet_tests.rs	416	416	3a99989b155726e03ec3a3fabfe488cffdb1c10e26b834e012d9480e659fb42e	core + final patch review
+crates/editor/src/buffer/tests/transforms.rs	642	663	b2c8eface6bfc860176f23e565edd6e64cae4719696a61411f70bb9ff450cc12	core + final patch review
+crates/editor/src/buffer/tests/watch.rs	52	45	562862af1fc461e0c3639d27f14f95cc9b2977f7c60810a2bc833542ca9f4b5f	core + final patch review
+crates/editor/src/commands/bookmarks.rs	257	257	7f1fd477f4685ba7fe4d56a8d31aad4724717c73dcdb3afb55339bfefb5d41e5	core + final patch review
+crates/editor/src/commands/column_editing.rs	253	253	ae0b3823a3dcd55a6c6d5878ecdad55d38bbdab6120c8faf42c98418b366d596	core + final patch review
+crates/editor/src/commands/filter.rs	81	81	aa7718781bf5eb51fd0efa09c1af28b9f657133258d83447d697b543a236a4cd	core + final patch review
+crates/editor/src/commands/line_editing.rs	832	832	1bb4c9c674e7dbe26415ec2dfe27f24ff34b0a842762fd07d117bed4502f11bc	core + final patch review
+crates/editor/src/commands/mod.rs	8	8	295b77e2a44434de2531d9edb6a1ae3dfc7188dd8afaa0c39b467519ee1ce50a	core + final patch review
+crates/editor/src/commands/snippets.rs	231	231	ca605a5c6adf3fdcfded9cf00731ea959a3c2b9f105e50a6d3fecef078b3d4e7	core + final patch review
+crates/editor/src/commands/transform.rs	872	874	756de4941e0e8286fc3c5436815a880df915c920cddaad04665a03c31e86f8d8	core + final patch review
+crates/editor/src/commands/typing.rs	167	167	f765e731e0f0046aea8f8d9ee06efc11660a7e13f10b7487fd1edaa5f75705e4	core + final patch review
+crates/editor/src/cursor/mod.rs	186	186	aa2e4ee8350a6f4b32a9b1ebaef87f043357c8104ee6f47f3c81b2d2f953dc42	core + final patch review
+crates/editor/src/editing/clipboard_history.rs	191	191	3114d2f04946a911bf220f44464ccf1e27a0e95ba68a8681a95c5b82ad58d4a3	core + final patch review
+crates/editor/src/editing/columns.rs	217	217	032043fc9255e3882a719ea887ec639e9c11bd1918deab32c29b1db4e9b28f4b	core + final patch review
+crates/editor/src/editing/convert.rs	272	272	90736eebf88dcb94a1322ced8146bed42a5136d768024b5eadbe26b5eda0021e	core + final patch review
+crates/editor/src/editing/csv.rs	706	838	668c3c45cf9fa57357fd97e8fef91051fc6b9d5438df4a436a3969c212d60ed4	core + final patch review
+crates/editor/src/editing/json.rs	204	204	aedfb56307fbd3dd1d523d038482631c94309ecbf33a74dc3a8a63af75bc08e1	core + final patch review
+crates/editor/src/editing/mod.rs	8	8	e30965b432705a0e62e10fb3b1953c3884bf7ede444ec8d71075782a718631e6	core + final patch review
+crates/editor/src/editing/snippet.rs	3136	3214	06b22040524c9607955cf8809e03e57449859fddccdbc32708d943454f1923be	core + final patch review
+crates/editor/src/editing/stats.rs	395	395	bfe205b95d2de848aa177b659a6cf7d5f9efaf035451bee1ff5f8ddbf6f33695	core + final patch review
+crates/editor/src/editing/transform.rs	935	1019	b896b850a9185fca040e0f9d30fd109443656ce57c3be9778eeaedb7fa1ba52c	core + final patch review
+crates/editor/src/history/mod.rs	205	205	d7cb76e8db8528c5e1f10b37e6ffb8f57b98d46bffc338fd7cfbcb41188f4a97	core + final patch review
+crates/editor/src/lib.rs	16	16	262023e6bd48bf5b2de0433f91e29763b27ebccb96ca70df90340835826a4a4e	core + final patch review
+crates/editor/src/rendering/fold.rs	1038	1038	0fa4a87f86a8a37d1f34f80e5f2922be74e489e70065f240084e8d6d0f3bd3eb	wrapping + final patch review
+crates/editor/src/rendering/folded.rs	880	880	f6f8f3b6398320c15df9d5d43162f9067373c742acf7c5d80e9dc4554dabdd47	wrapping + final patch review
+crates/editor/src/rendering/mod.rs	2	2	8f682ba5bd1774315cd3b10eca15b53d26c29057c3437311ba05a3f27e04c831	wrapping + final patch review
+crates/editor/src/search/extract.rs	139	139	df19d0c6f2f13601c2c497759ec0db96e23baaf2ccb1e3e55ec1d9ffff0db77a	core + final patch review
+crates/editor/src/search/files.rs	1881	1881	78a3c196f3ef10e831f14689feac56fd6b6b67af5a81ffd604b029fa31aeb29e	core + final patch review
+crates/editor/src/search/mod.rs	8	8	795ad013e1351edd438f80593413d91f99d39d86e9bdfed76c01ae96892f7fe5	core + final patch review
+crates/editor/src/search/model.rs	662	661	38347d629972664253914e15499e3b5b9f1350219d4f4fcef44fee0d904a4c99	core + final patch review
+crates/editor/src/search/pattern.rs	1031	1031	4833506ddaaf73b367f07773c744994c6681ad78b9962c31b695e2b3d5b74640	core + final patch review
+crates/editor/src/search/pipeline.rs	1457	1457	691b479ccf530042bf4671c44314c861a94baf4faabce06d5086bbdb6bf879ff	core + final patch review
+crates/editor/src/search/results.rs	592	592	33ee88accc45e2592b17c1f623d956f6da6f6bc64a0f7e49429fddaef55eff6e	core + final patch review
+crates/editor/src/search/saved.rs	331	331	ab942ae62b0ee6b49ea8faa39223a2005529b08a207e71a12968f1739e72e6ff	core + final patch review
+crates/editor/src/selection/mod.rs	829	941	a3500a4082fda1da353ee1c3b07cd6ffd7d580ddb08b9252bdede47f5fefbb70	wrapping + final patch review
+crates/editor/src/viewport/align.rs	486	504	511bbd8bf343b7dda6706654fb93a4bd4cf8fbc447b24c1bc09ba6ca29fcc60b	wrapping + final patch review
+crates/editor/src/viewport/filler.rs	624	624	07f06a7b28cb0d595070945b163115b1a636ae2902d4f96c2f8c23189a157284	wrapping + final patch review
+crates/editor/src/viewport/mod.rs	1393	1527	d9d85c7ca5f35eccac9180fd213bf2d190f52dc040d1d3a0c0394c698fbdda2e	wrapping + final patch review
+crates/git/Cargo.toml	10	10	79509a8b28170789ccbe86a021320c2a34532e1d64bfc05f245bd6d498d5ba32	core + final patch review
+crates/git/src/branches/mod.rs	24	24	c820ad7f1dd3ce1cff4b4bbe3a77b0c266d6b3fcecead7c21d887f2fa4d62983	core + final patch review
+crates/git/src/commits/mod.rs	11	11	a3b5d72c98aead6c5cc681c8e9020646190e13734b3ccaef91b8ab4d0d9143f6	core + final patch review
+crates/git/src/diff/changes.rs	217	217	d6e232e8898200dfd6f2009f419e1dcd798204b692c69599ad40df18b96b46c0	core + final patch review
+crates/git/src/diff/conflicts.rs	136	136	28d33147c2998579c91ced38266c904bcf05bab62ce13cf9a2363b28bcdcde4e	core + final patch review
+crates/git/src/diff/mod.rs	12	12	214e44657ac260ca550dc3d311fbe11c6f46226ed1296a89d9c8f01f8ad89d35	core + final patch review
+crates/git/src/diff/patch.rs	30	30	a3ca5572fa67c28e3d34a66a81a788cee8401dfe11238c3de585849d50b55860	core + final patch review
+crates/git/src/diff/versions.rs	180	180	e18bec37b522898016de5c939fe0a99e6f3663b1d7109859623dfbdc67728ea5	core + final patch review
+crates/git/src/errors/mod.rs	18	18	f768f8108efefa9ba37c78019d54d2638defe24c5ef2e745d37a6b43c523c9ad	core + final patch review
+crates/git/src/lib.rs	41	41	2ee6c5820acedffc309bfb5012a027c07288e56d161f471e259a81a461bfbf83	core + final patch review
+crates/git/src/operations/mod.rs	58	58	d419e8858fbe2f264ea05b8367b79c3a0674f27a09be0a738d112c37970537c4	core + final patch review
+crates/git/src/repository/mod.rs	86	86	485913509169a91406a2446ab07afe66d5ed743dde33f40f286ef574f3263e0f	core + final patch review
+crates/git/src/staging/index.rs	63	63	bf700e2d0fd79d2a912fc3eaef99b81ed538f3783016e97b49c8105c13f3d262	core + final patch review
+crates/git/src/staging/mod.rs	61	61	824429b3f90d29010ed1b7044d42fbf8129b858800ab6f0dd97ea14eb35a18d8	core + final patch review
+crates/git/src/status/mod.rs	94	94	b801ebfa70e2015dc709e06ebcae79adc663a3a39d71cbb0c47873332afb9b81	core + final patch review
+crates/git/src/tests.rs	636	636	b5a791e58d01089b794db79daa1fffc591df0edcee937a99eeebea3ad60061c4	core + final patch review
+crates/project/Cargo.toml	24	24	4a7897bca689bb063538c66c5ecd56f013560e550141403d476c1f7dc893c2c5	services + final patch review
+crates/project/src/directories/mod.rs	3	3	47a33c9c7641bb06a2a10d97d631c6515ba2128585e8f93068fc7420223aca5e	services + final patch review
+crates/project/src/directories/project.rs	465	465	f2c8a0d2590a3d8413945eb115683cf432e50d3c63cbac321c1daf842164108b	services + final patch review
+crates/project/src/documents/comparison/folders.rs	858	858	f2f04f62ed24aa741d3b88154da3e37d6bce6889ff35fcea788c5c38102ae661	services + final patch review
+crates/project/src/documents/comparison/mod.rs	795	795	dbc82a78118096013ce8ae1d6f33aa4e7881382a7251aac675ee856b9b5cf547	services + final patch review
+crates/project/src/documents/encoding.rs	194	194	6fceca130912c88b32e0e9735dd397f11afaf277db7186cb48d7f9444397a8bc	services + final patch review
+crates/project/src/documents/file_history.rs	955	955	bd5f49de4e57d3b93bccf03d3ae5818f503cd497aeaa42a320ff626b9d6fccc7	services + final patch review
+crates/project/src/documents/io.rs	708	737	d53e26cc3af49bb88250a9e844ad5a353b81861024bd84733bcb2359f874a003	services + final patch review
+crates/project/src/documents/mod.rs	6	6	6348dc2d719920d27f19aa4f1db6ea183944a571404b1fcdaf164db32616735f	services + final patch review
+crates/project/src/explorer/mod.rs	60	60	4076a528e064d5e6739b3f85663e54e3319b54a5d400f4cff825af750a1ec1ce	services + final patch review
+crates/project/src/filesystem/mod.rs	373	397	ff9abd30d4ce6b4148af5405d653b2696bce6dcf85de6bd2ad47650a71356bbd	services + final patch review
+crates/project/src/filesystem/platform.rs	119	119	73b4e4e28a1299a8c6d6c0908b8ceb4d1d69d54fb380421f3dc90398faa052cd	services + final patch review
+crates/project/src/filesystem/reviewed_copy.rs	1130	1130	d058b01cb1ec0fcfeeaaaf378548748cb0d26ad58177982c32417b227608cf59	services + final patch review
+crates/project/src/lib.rs	13	13	48e92fbe0d8166e61b9b763d8479e558efe791aabf2ef9995e2de03fca9b53ce	services + final patch review
+crates/project/src/paths/mod.rs	30	30	86aca52c4ffb77cee69e97e02a4d419fffb39be09a17e107f5fc50adbd541ddc	services + final patch review
+crates/project/src/watchers/mod.rs	265	265	df7533a11950104c5c2571d5a2392e97c47dbb94d21cbf6bbec8039a8a121c0b	services + final patch review
+crates/syntax/Cargo.toml	46	46	795d24c22fc86ed8faac08180e78b5b8622b93a8c8c2511ae24555f5b3db3944	services + final patch review
+crates/syntax/build.rs	20	20	6b4404f41801a9065000dc52c20fa7cca3ed88e51bec3d8b1d5ceac2bb431f8e	services + final patch review
+crates/syntax/src/detection/language.rs	671	671	a35b666c95f97e289486e2bc0c72e6d19186ab6a1d1408a25d4350f04f85e2d9	services + final patch review
+crates/syntax/src/detection/related.rs	456	456	07c7242e0e929bb43e9491fcd7568364f9c89b03778b514b6191294469b179d5	services + final patch review
+crates/syntax/src/fixtures.rs	35	35	f3fdca27f8841377c9bb7b11e81ffd3b52cf798b87e62de2371a731fd667c10f	services + final patch review
+crates/syntax/src/grammars/FreeBASIC.sublime-syntax	90	90	f2415d249e5ba64145b9ca65ae08000bc9e9501670468d51d2730c26fc832c23	services + final patch review
+crates/syntax/src/grammars/HolyC.sublime-syntax	73	73	6bc4c2a1bb64f825a4408c73d80373cb428a5790b648e8fe3841596579c9d5ad	services + final patch review
+crates/syntax/src/grammars/queries/hcl.scm	14	14	5fe8965139a9fda9f51e2dc23da8ce89811a7542223887916408b463a0607385	services + final patch review
+crates/syntax/src/grammars/queries/kotlin.scm	28	28	5fffcd19e4e5ddb00f085a6de70b9287391f6aac9649fc94b85a52e721906912	services + final patch review
+crates/syntax/src/grammars/treesitter.rs	953	953	00e67ad10a6fdf33ec8997932022ca20772f665454c98a93350150bb36d41398	services + final patch review
+crates/syntax/src/highlighting/highlight.rs	4338	4338	78e21f3591e2daeeccd7ccb69ef31ee7a9f3531ef4f2956d26ef6b5520dc0ec2	services + final patch review
+crates/syntax/src/index.rs	194	194	7e46707252968b7e48210a5a234e3d4c47612a7f793c59f4b5edb96cd1a84439	services + final patch review
+crates/syntax/src/languages/complete.rs	1157	1157	a939376451b2a29b2bd13b9b866520273b336019543e6740c9156bb72fc1499c	services + final patch review
+crates/syntax/src/languages/lsp/mod.rs	1334	1334	146e02e0e397ffad167530120cddaa30697de61de1a82f61fb66b7cee142725b	services + final patch review
+crates/syntax/src/languages/lsp/real_servers.rs	454	454	8c7b0cf6a4c3856d4d844b088e264477da1df531cc2cfc3efc0b8ddfefb017ec	services + final patch review
+crates/syntax/src/languages/manifest.rs	594	594	1d4ed01d16a4cffd57cc0f9f7b4b71a66444a74e6c36494bbe495c3ba6ac84f1	services + final patch review
+crates/syntax/src/languages/registry.rs	752	752	c6f7bd6b2cd87dddc79ec36ca51aeb4027b370ae4e614862dcbb38d80f8e653b	services + final patch review
+crates/syntax/src/languages/spell.rs	1668	1668	e8bbcc186ed9a06507d8e5a572c742ea56e7ccdf25f80006876756908340bcd9	services + final patch review
+crates/syntax/src/languages/spell/platform.rs	675	675	e4d83de68bd94eb31618f0fd7b725eaf0587f32fd1af32d8fe27d2848094621c	services + final patch review
+crates/syntax/src/lib.rs	24	24	be83b3ffff2f04e742c20dd05a783f20390d7d456f5c562e08081f48ca02d0d6	services + final patch review
+crates/terminal/Cargo.toml	15	15	18716613e8cafe8f8723e1ff4c7acc9d6515cce9d9087f05af8963229ca4914d	core + final patch review
+crates/terminal/src/configuration/mod.rs	20	20	d2f2e13549928bdca0f068cfcb5179d41f99a1e9cf3da04d55373712520a1cf0	core + final patch review
+crates/terminal/src/emulation/mod.rs	106	106	225c058eefa0eed8fc07ed307ec10572b303ef0155b7069c33e4df84dc7fd4fb	core + final patch review
+crates/terminal/src/input/mod.rs	232	232	7c7742e359f73100433794d763a8eaae582b5b3565968d01b5833dd908f2ffc9	core + final patch review
+crates/terminal/src/lib.rs	18	18	5eb93eb3d40c6be8d63de5001cba0721f35ec42e650bc20e511c6c6765fef6f1	core + final patch review
+crates/terminal/src/output/mod.rs	14	14	352b3a605e05ce598356a518ddfedf38496aebd7b8cae325179766fd0a9d56a6	core + final patch review
+crates/terminal/src/processes/mod.rs	67	67	62f1186157e4e7fa4c6b10990a290f5821d2c628d96c1c0409e00d09109d91f4	core + final patch review
+crates/terminal/src/pty/mod.rs	395	395	d992b3f6d0b36ac3c4ab6bef9d41faaba3917c903a69d1789ce4da8fd967dd1c	core + final patch review
+crates/terminal/src/sessions/mod.rs	179	179	81ab2085cd884ddb8a9644fa65a400091323c0b9e96bf2400cfce9ea28de07e1	core + final patch review
+crates/terminal/src/shell/mod.rs	17	17	89d842aa61c059f06e6d1e316ad96d4164d6e76f246cc941c3ba73e065ccd794	core + final patch review
+crates/ui/Cargo.toml	38	38	aed97e1600ebdfcd672cdfbb66b0dd58a1318652a97fbd5f69da59cf11ffe5fb	editor UI and panels + final patch review
+crates/ui/src/bars/mod.rs	8	8	8e83f85ecb1ee2b0981386ee3eb8b2ec02073e2c7c02b7903e2f7102ef07d9ed	editor UI and panels + final patch review
+crates/ui/src/bars/statusbar/mod.rs	289	289	4ee07055322cb0734702d9b6d84d8828cbe8c9482002404844cc28ff3fba0200	editor UI and panels + final patch review
+crates/ui/src/bars/tabbar/mod.rs	415	415	623cbd1492243fb8c10c78afade3732b96b67e36aa4402dd824991aaabba6ea9	editor UI and panels + final patch review
+crates/ui/src/bars/titlebar/mod.rs	23	23	2c20dd45c1b10775b35bbe0a88df8e03fd16af67c21f8e4af58e01e70e9420e9	editor UI and panels + final patch review
+crates/ui/src/components/clipboard_history.rs	24	24	6d57447ef90e82f2b9402e261a5c6589311c79907d929e36d9de2260434cbcea	editor UI and panels + final patch review
+crates/ui/src/components/form.rs	427	427	92a87ccab354305ad2b08a99334dae6b6d5c9beeeaf1b454272a4d047d1bb2ba	editor UI and panels + final patch review
+crates/ui/src/components/html.rs	577	577	5707ea0312f7be3a542284d955c68db0e24277bb0273d92786592bf38bb6975e	editor UI and panels + final patch review
+crates/ui/src/components/mod.rs	6	6	02b0f4e280e81707aab8ae7f08b0b5ef1f74b1ee452ecba7b7416616ba8d2168	editor UI and panels + final patch review
+crates/ui/src/components/widgets.rs	166	166	a9889d42a0ae15b907dc28eb65b11e1efea6956811ae6940199db3aa621d256e	editor UI and panels + final patch review
+crates/ui/src/documents/mod.rs	284	284	204abbc0a7f567be045ed307ab6dbde5d496a6ded745908f8b38276a3a8d1162	editor UI and panels + final patch review
+crates/ui/src/documents/save.rs	397	397	ffbb49bd216b22d401742ad1080e3a45b5e5a2ff1c57e8db9c9bbb9fa9399b8f	editor UI and panels + final patch review
+crates/ui/src/documents/save_tests.rs	741	741	e6a538124893ead262117f020d2e3e1f2a2185a43fd29e34e3810123c42d033f	editor UI and panels + final patch review
+crates/ui/src/documents/tests.rs	556	556	24461e320bf88b638667cbd2924667ecb2a988b0f2a5e7a76d0fef0c0280c830	editor UI and panels + final patch review
+crates/ui/src/icons/mod.rs	121	121	d9f2769f3bf4598e29e4f5bbf1ba8f3cec86d69c51023dcfd1e02d98a6b302bc	editor UI and panels + final patch review
+crates/ui/src/keybindings/mod.rs	371	371	bc1c685613c1ff7da9ef5e57e7533f699589c4cd6998f0355ae8d305a24fb525	editor UI and panels + final patch review
+crates/ui/src/languages/index.rs	2389	2389	3d130419fd911ddf1fe08d99d8a6c6e164c55e2847c5cabe0d3c416083ad7bb7	editor UI and panels + final patch review
+crates/ui/src/languages/mod.rs	6	6	7f7e52f5a4e5486c5f9fd17e5dbf8c03857d6e7e12ae9c0413480653a8464568	editor UI and panels + final patch review
+crates/ui/src/layout/mod.rs	153	153	c3d1634b40aa95d5636778b7c73782931a2bb4c79ec0d301d25b229732dbb294	editor UI and panels + final patch review
+crates/ui/src/lib.rs	69	69	0eba3b084637071d3ad13f5f44f8428788effdc3b53e60790a8d08dca0b55a60	editor UI and panels + final patch review
+crates/ui/src/overlays/context_menu.rs	95	95	cb0a5d9aaf2116118dcd86d5da9df9ac34010f687e4a80e98fc687d8eec8954e	editor UI and panels + final patch review
+crates/ui/src/overlays/mod.rs	4	4	17bda1861d5aa7a59ccdcfd3faebe56c595a097734af3c4d637473aba3ce01d5	editor UI and panels + final patch review
+crates/ui/src/overlays/quick_panel.rs	1821	1821	59b0e477fe8c537678ed21deaf1ff47cd294fe4572872effa6248e0fabddd8f2	editor UI and panels + final patch review
+crates/ui/src/panels/explorer/mod.rs	995	995	145410c44aef86b3a27fd91209f1d205ca2806d70027ec0c42baa88c7f713a67	editor UI and panels + final patch review
+crates/ui/src/panels/git/mod.rs	2299	2316	f7a0dfba3d63936d86c86e5118d9b7c7eb83ced72034ee289143acd4e6b1027d	editor UI and panels + final patch review
+crates/ui/src/panels/mod.rs	13	13	929347a5153309baad3143be2e92767d84b1a00b8fcf9f72c90588df57b02876	editor UI and panels + final patch review
+crates/ui/src/panels/outline/mod.rs	984	984	0ece23e149fbecf62cfcaab42033f92b6091ea164f24d0d32ae23221f8ca926c	editor UI and panels + final patch review
+crates/ui/src/panels/search/extract.rs	261	261	c4ef5d6090709720f36b755326a447da715a9e239d7728c1b94ffc9680fc2e18	editor UI and panels + final patch review
+crates/ui/src/panels/search/find.rs	1589	1589	daa84af24137d93dd91d23603c3c7a3b528ce1c220a97ae1b4a74715348e5a54	editor UI and panels + final patch review
+crates/ui/src/panels/search/find_in_files.rs	299	299	8d287e02520f3df60269f8e56f7067fb531285edb74431fe5cb9de3336ef1a02	editor UI and panels + final patch review
+crates/ui/src/panels/search/find_panel.rs	317	317	88af88396b035d5943b5dcd9bfef33289739b19ea0a332477b7610aec9548894	editor UI and panels + final patch review
+crates/ui/src/panels/search/mod.rs	9	9	56445fe303ae0a6d6c296175c6824b38b7f09868969d767386a6a934bced792f	editor UI and panels + final patch review
+crates/ui/src/panels/search/playground.rs	897	897	159656eeb956a07870640c856b1329d526489513d09e201496feeca8073e62f9	editor UI and panels + final patch review
+crates/ui/src/panels/search/results.rs	1887	1887	bf5ce26a115e8a3590111679bfb3707a020196b3377e9db5e8c8b2294fe82159	editor UI and panels + final patch review
+crates/ui/src/panels/search/saved.rs	428	428	4bc667a966ec7275409bae654306fc7f52ede12060553c6c2e6f42dd22dc9506	editor UI and panels + final patch review
+crates/ui/src/panels/terminal/emulator.rs	740	740	9da091e01971649130908f9c766984f30d8f017411b5261581533f5718250889	editor UI and panels + final patch review
+crates/ui/src/panels/terminal/mod.rs	125	125	e3d94750470e7ac2b16b4a6eae7c849e8ed39ea082fa0a7a9da302524c4ed327	editor UI and panels + final patch review
+crates/ui/src/platform/macos/mod.rs	716	716	66413426c5a76e85aa18620fbd92af9fedd440efd757ff6a7164d2b1246eeb25	editor UI and panels + final patch review
+crates/ui/src/platform/mod.rs	4	4	c5768652381570a9dca04a746a3ea892b55bd7b4a22f44d92d3cfb8ae8d8d42f	editor UI and panels + final patch review
+crates/ui/src/platform/perf.rs	72	72	b6335ddce0b472f663d5ed1ab94ecd326982bf6bf8ad3af923b10320e1482bd5	editor UI and panels + final patch review
+crates/ui/src/styling/mod.rs	3	3	76fdff939b85580956af625e3f947369816acdc5d49ee0a2441987fe9bed07f5	editor UI and panels + final patch review
+crates/ui/src/testing/mod.rs	40	40	9ca7273e5cffb89b9c28e7bba0a9de554e42050fc8a8afae6f214068bcc621be	editor UI and panels + final patch review
+crates/ui/src/views/editor/actions.rs	444	444	41f430661b9409355a44a2572cd30dd417a69596f5a6852f3b034516899a8f06	editor UI and panels + final patch review
+crates/ui/src/views/editor/aligned.rs	480	480	22c4c2f45610c3ce83d1b6b36e2953035ecd796f4547774dec1d617d1e36e2b2	editor UI and panels + final patch review
+crates/ui/src/views/editor/commands.rs	1247	1247	936f30b13b217462898445aa08807552578582af476caf39d3e55c642f69ed4f	editor UI and panels + final patch review
+crates/ui/src/views/editor/element.rs	3353	3375	ee6798a6af8393f5b5130ccb93786c05ed69750b3bd6a8c5350389741ab9f119	editor UI and panels + final patch review
+crates/ui/src/views/editor/filler_tests.rs	207	207	377b4ae4ce5fca90ab954781edfcf7a836a19b6711b958fb683620d90d4850b7	editor UI and panels + final patch review
+crates/ui/src/views/editor/fold_tests.rs	1002	1002	71e8d5a27453f34e03ef82bbdf335094be25c0a3d004be20866fa89edde25b98	editor UI and panels + final patch review
+crates/ui/src/views/editor/input.rs	286	286	c5d93657b40e68bda0aeb5d4dc6a5d39af5eb41b917533b067be614f6ae08475	editor UI and panels + final patch review
+crates/ui/src/views/editor/measure.rs	120	120	2e2a29a274e01af88fc02106a0b2fc4ba8334aea6de152bfbbcb9d8481d618de	editor UI and panels + final patch review
+crates/ui/src/views/editor/mod.rs	1769	1769	86345c8dc4577fb9cb5c63e3a46090898e42b27fda20a8840d7f14774393de4e	editor UI and panels + final patch review
+crates/ui/src/views/editor/motion_tests.rs	237	237	b3909094be4c198f55bf0d338eaef3b85cb1196d000d45ab7664c153dd3181d6	editor UI and panels + final patch review
+crates/ui/src/views/editor/mouse.rs	1241	1241	bbfe1861143236ce5ac023e4137d0fa1efb3d52e3a92c11dbc4b4379e7e55213	editor UI and panels + final patch review
+crates/ui/src/views/editor/popup.rs	2018	2018	10880ce5165757dcac5ec2bb700de5c91849ce6804744f7528fc5b99a94034ca	editor UI and panels + final patch review
+crates/ui/src/views/editor/snippets.rs	606	606	7e377a6418b62a0e4862af1d28240cc0689436d2d6086dace92868fda27de9f4	editor UI and panels + final patch review
+crates/ui/src/views/editor/spelling.rs	264	264	94e7138cc43e96f06715eb76907f75fc3ed924ad5d3da7ab25bca00dab6a0294	editor UI and panels + final patch review
+crates/ui/src/views/mod.rs	4	4	273df4d7cc29d63d74bbf3d859e39fd026e3ed52359ce900166db6758ee5756c	editor UI and panels + final patch review
+crates/ui/src/views/workspace/actions.rs	508	508	34c2c81edd0299a4bc981c60fb984528805f6fd447a2b8b2982d2a1560ee3d65	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/appearance.rs	50	50	cbeaa6c25e9a690d5746698569ce91c744a2fecf618b8bc948758482e7c326fe	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/automation.rs	1139	1139	95d47175d1713e7f7c36a7e60d6120a3845a03f149bacd2bc350b211f888ef1a	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/cli.rs	516	516	c8eaec9cc6cf0760b8ce18708c010469478f4e404c9d5c417b30793f88d2b215	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/comparison.rs	4982	4982	b1556b880d3a5d4016c4910c9ee46975f211248dc3de43a12b2cfe8c4a40f1bc	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/comparison/copy.rs	373	373	5a7d68f5c0fe3be2948fd2fdeb61de7702e0d83564db0424fe357d3dc2c632d7	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/customization.rs	1039	1078	3e940454511fb5c743c2ba9777a92fe551d332c5430ccc9adbbd4192224c1dd2	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/disk.rs	421	422	d50013e93c1020520c2a05780fd860c6cb3505000af85e620261cdb0a83a224e	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/distraction.rs	225	225	78fc02dbe52326ea642b1e8f8b12bf0ca102e1f88ad63dda0848a5410dac5411	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/docks.rs	467	467	afdc894191d93656e2df39240330065cb5663fa902be462018d754ac33c7d3ae	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/editors.rs	347	349	d0f3704106fdd06cff090369d3dddd6a88242b9ccbbf9392eb8ef8b1ac0dd8a0	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/encoding.rs	271	271	caf2d4335e99720c20c341c866ca494bd5fe77baef3e267c08bdea329277a91a	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/fileops.rs	1137	1137	9da0d8577b1cd0194e76c455a5decb30692ecea20b5d03b69d6b1a2eabe61594	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/files.rs	1011	1077	ee4bc249c51cb978c6ebdcb1d0baee61c0bd0eb78d8f1851f36d50f7052fd9e4	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/goto.rs	1807	1807	4a53022e9500dc3ec9c3cb0bb1cc100a575d3c4427ec401c630e6c467a44425a	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/groups.rs	392	392	c57a74a82f780d3af84532354a8718a1db1bc530ed90eea74c295387f0c3e2e8	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/history.rs	711	711	30915209470ea9665b80eb250136ca9d213fbe47f39ae3599df884efe96b0593	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/index.rs	2574	2574	ce4dc59ed40266cf88cfad3494025cad426abf1dfb982ebae20fc976d8164254	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/json.rs	384	384	4d459664c2e12f71702c8f8e2a60d8fc3c09de183d542e1be542f9e15a3323fe	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/language.rs	1777	1777	5a86c52545099992631b3f4310121cb410724b1eacfafe5d1f878b78b0c690c0	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/language_tests.rs	2139	2139	b66ca344655492c4067d05d7fdc95ffaa54761b42b64d3470bd0825adbcc996f	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/menus.rs	1038	1038	3f5220d47ad41a1513124963f142c62e1fe8fc14f7b06fbce6a8af8703eaf537	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/mod.rs	404	403	fa76f5a2493f224da8f3ad244b3927af61db507043602cc352aec5bc386748e8	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/opening.rs	373	373	b5cd4b7678f9fb70d1fcc44c7cce55c772dd2d71abef6d9df68b57af1154f3f7	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/panel.rs	102	103	90c46ed63eb2895a131bd7c9bfd464b2cd802c134bda78def84a729e8b8e14c5	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/pickers.rs	214	214	6210f9359cb61cb1148e6119d3053b834abce305e58dda78221b23461b53723e	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/pipelines.rs	962	962	b34d1607632be62cbeae68a82da5a59b49bf94f0f69610265970bc1138e0e743	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/preferences.rs	489	489	b503513f2634ed7b9dec41224ec0830a89ad9c2e7116c032a53602e98b133cd8	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/projects.rs	1001	1001	2c5325eae834aaaa96c6238f7ec0c408970f31cc8ea452c7b74d752de3a518d9	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/rendering.rs	181	181	caea847e02bc64df56dfe93fbc3b9cde9b876dfc8dbd32894b9aeb0a1ad8b452	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/roots.rs	350	350	fd08962c18879a00d02e55cf5261194ef9b97792d20a77df578ff18dee1a64e5	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/search_tests.rs	1364	1364	53e71c097a15927c6f799c43df34f29d62d8803b6d866884524dfb32c464da4f	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/sessions.rs	1027	1554	306b5a1dc8de36bce9ec3305f9d9dce322c2932819295f1e97be0b53d8cdc81b	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/snippets.rs	87	87	6a36e359e339b3d5ba0b51e44f9dd3918ec957636720735257e811d11b0d0dbc	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/spelling.rs	324	324	20614e4f36fcfda286451d74dfd50dbde372b04a17580b9f56de1152cfb1bd4e	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/tabs.rs	1568	1626	e00348ef12904a06ea0bdec8eb22e265ce31ac6df96108f5ca192d00016702c7	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/tools.rs	190	190	97624c850b8aab323abc1138439ffc332b0f8f1cbaaba70fb8c8143f5eb0d05c	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/transforms.rs	316	316	6fc6b992fbfcf7505fd3f969333e370719161777cbd24545d247d9c2edb0f662	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/ui_tests.rs	7780	7780	724f69f89cff8c9f8937687b0eeca7c80c84127ec4f80f38fc640159359e40e9	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/variant_tests.rs	639	639	02505a84010edb374312ad845f26c991ec89a29fac7bae098dccdafbc7a80e02	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/view.rs	536	536	083352013290bf48b03e036c057da5a6b425e6b7ae1b529573ab51571b450504	workspace UI + parent integration + final patch review
+crates/ui/src/views/workspace/window.rs	314	314	2aeb67aa68345a55b53dc85fc48201fe024fd56a1f2c66a79a6617851ffd5078	workspace UI + parent integration + final patch review
+crates/utils/Cargo.toml	13	13	54b2d79d85760056e2ea472a4065675bb09ab24e73b00a2f9ae75393cb2872bd	core + final patch review
+crates/utils/src/fuzzy/mod.rs	149	149	7db6c815f05784af0b544f9cda6c6090938240e4d59c4c9941eeea732bfc53e9	core + final patch review
+crates/utils/src/lib.rs	5	5	2b01a793192e51f1ff6cf4be06a21c9f9889f95ee85f33636bf7c54e71b19ed1	core + final patch review
+crates/utils/src/paths/mod.rs	124	124	b4090a152186b692b48611858cde297bceeece1438d56dd770c324283c394c12	core + final patch review
+crates/utils/src/text/mod.rs	273	273	8451713604c52716526331d8c3a8320a20556ecdbdd83bf11d73e061f2edbd2c	core + final patch review
+crates/workspace/Cargo.toml	28	28	d9b54b0f34724c1390fdbd886653c8c8558e874ad27bd5db210616ef708535b6	services + final patch review
+crates/workspace/src/layout/mod.rs	864	864	2319660f3226e88394dc79fa1c54eaaa72b53ccb17b9fdf29ca1404a3cec8636	services + final patch review
+crates/workspace/src/lib.rs	10	10	5ff09631fe8ccb5d5edaac55fcf03f82bdf518b4ec63e7e763b0822c4f85be44	services + final patch review
+crates/workspace/src/navigation/cli.rs	377	377	ff05eb11c5133c85e7d9fbe839b55c4bef292643bb5beb05ab22f08ef0b0410a	services + final patch review
+crates/workspace/src/navigation/handoff.rs	1655	1724	ac64712188a5a12ff2f7c1fe426f51d39e6e2d2ac8ac912a263f12255299aaec	services + final patch review
+crates/workspace/src/navigation/mod.rs	4	4	2fd1ad46ae56f16ec288a3be6b5118c9221c54a1327686f7073060d942a84a61	services + final patch review
+crates/workspace/src/panes/mod.rs	103	103	b3289d875a7f07c6c945852de878dbb58940d0cfd50c8c974c8e19e7c57f2553	services + final patch review
+crates/workspace/src/sessions/mod.rs	1940	2111	3501509e9db93c8199b2e17993e3028b5833f501b77d986190ab82c5f1d131b3	services + final patch review
+crates/workspace/src/sessions/project.rs	132	132	b46ded292d5f5f0db8ef6e68d27fbbbb56c6541f45d8bcdce68a3b97b34e06d4	services + final patch review
+crates/workspace/src/tabs/mod.rs	279	279	343c984bb1a9614c61caaec6102782ef4019c1c45f181f0d0391570a761b0e0f	services + final patch review
+rust-toolchain.toml	4	4	f3da19f92d46465df86cb59e80cdbe9ef2f1a91010ab7dbd2edc9390014e1023	parent application, build and integration
+scripts/bundle.sh	56	56	e30e3b9fe0c2656aef4c5303929c68df676d2c1fa279d01194ec40af77f99c81	parent application, build and integration
+tests/fixtures/language_features.py	212	212	60ec692f12237fa6a97190ea66a16a25ffe6f81ebcb7477a6f7085bde5c1e796	parent application, build and integration
+tests/fixtures/lsp_server.py	89	89	941c6bfbad913b26f20a3370e8cbde0ad6455e4f3c5670bad50454ee7a7e7282	parent application, build and integration
+tests/integration/cli.rs	67	67	5ec11217f127929e4c5d5bebb91a57f913c22a6073bf1d09b205dd541d840007	parent application, build and integration
+tests/integration/signals.rs	87	87	8d62e01db737454455dc99e035ed4d5481975f27b8243b53227bac921e366105	parent application, build and integration

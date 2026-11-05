@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "id": "example-language",
+  "name": "Example Language",
+  "scope": "source.example-language",
+  "files": { "extensions": ["example"] },
+  "comments": { "line": "#" },
+  "indent": { "tab_size": 4, "translate_tabs_to_spaces": true },
+  "syntax": "Example.sublime-syntax"
+}

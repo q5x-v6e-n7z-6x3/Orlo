@@ -1,0 +1,7 @@
+target/
+.DS_Store
+docs/reference/sublime/
+docs/reference/orlo-before/
+docs/reference/orlo-after/
+__pycache__/
+.scratch/

@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "id": "nim",
+  "name": "Nim",
+  "scope": "source.nim",
+  "files": { "extensions": ["nim", "nims", "nimble"] },
+  "comments": { "line": "#", "block": ["#[", "]#"] },
+  "indent": { "tab_size": 2, "translate_tabs_to_spaces": true },
+  "tree_sitter": {
+    "grammar": "grammar.wasm",
+    "highlights": ["queries/highlights.scm"],
+    "folds": "queries/folds.scm",
+    "source": {
+      "repository": "https://github.com/alaviss/tree-sitter-nim",
+      "revision": "ac72ba30d16edf0be021588a9301ede4accd6cf4"
+    }
+  },
+  "lsp": {
+    "language_id": "nim",
+    "command": ["nimlangserver"],
+    "root_markers": ["*.nimble", "nim.cfg", "config.nims"]
+  },
+  "formatter": { "command": ["nph", "-"] }
+}

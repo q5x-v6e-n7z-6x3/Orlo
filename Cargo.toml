@@ -1,0 +1,67 @@
+[workspace]
+members = [
+    "crates/app",
+    "crates/editor",
+    "crates/workspace",
+    "crates/project",
+    "crates/git",
+    "crates/terminal",
+    "crates/ui",
+    "crates/syntax",
+    "crates/config",
+    "crates/utils",
+]
+exclude = ["vendor/vt100"]
+default-members = ["crates/app"]
+resolver = "2"
+
+[workspace.dependencies]
+# Edit > Convert: Base64 and the hashes
+base64 = "0.22"
+# Lookaround and backreferences for Find, Replace and Find in Files (crates/editor/src/search/pattern.rs): range-bounded
+# and anchored searches, which 0.16 (syntect's) lacks
+fancy-regex = "0.19.2"
+# File codecs; already locked transitively via GPUI.
+encoding_rs = "0.8.42"
+gpui = { version = "0.2.2", features = ["runtime_shaders"] }
+ignore = "0.4"
+# fcopyfile: a save's temp file takes the old file's metadata, not its data
+libc = "0.2"
+md-5 = "0.10"
+portable-pty = "0.9"
+# Already used by ignore/syntect; bounded searches keep anchors aware of the full buffer.
+regex-automata = "0.4"
+regex-syntax = "0.8"
+ropey = { version = "1", default-features = false, features = ["simd"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha1 = "0.10"
+sha2 = "0.10"
+# SIGHUP and SIGTERM write the session before Orlo goes
+signal-hook = "0.3"
+syntect = { version = "5", default-features = false, features = ["default-fancy"] }
+# Bundled parsers and highlight queries; no external grammar downloads at runtime.
+tree-sitter = { version = "0.27", features = ["wasm"] }
+tree-sitter-bash = "0.25.1"
+tree-sitter-c = "0.24.2"
+tree-sitter-c-sharp = "0.23.5"
+tree-sitter-cpp = "0.23.4"
+tree-sitter-go = "0.25"
+tree-sitter-hcl = "1.1.0"
+tree-sitter-java = "0.23.5"
+tree-sitter-javascript = "0.25"
+tree-sitter-kotlin-ng = "1.1.0"
+tree-sitter-php = "0.25.1"
+tree-sitter-python = "0.25"
+tree-sitter-ruby = "0.23.1"
+tree-sitter-rust = "0.24"
+tree-sitter-swift = "0.7.4"
+tree-sitter-typescript = "0.23"
+unicode-normalization = "0.1"
+unicode-segmentation = "1"
+vt100 = { version = "0.16.2", path = "vendor/vt100" }
+vte = "0.15"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1

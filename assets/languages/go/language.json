@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "id": "go",
+  "name": "Go",
+  "scope": "source.go",
+  "files": {
+    "extensions": ["go"]
+  },
+  "comments": {
+    "line": "//",
+    "block": ["/*", "*/"]
+  },
+  "syntax": "builtin:Go",
+  "tree_sitter": {
+    "grammar": "builtin:go",
+    "highlights": ["builtin:go/highlights"]
+  },
+  "lsp": {
+    "language_id": "go",
+    "server": "go",
+    "command": ["gopls"],
+    "initialization_options": {
+      "semanticTokens": true
+    },
+    "root_markers": ["go.work", "go.mod"]
+  }
+}

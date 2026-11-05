@@ -1,0 +1,4 @@
+# the toolchain CI and local builds use; bump it on purpose, with a full test run
+[toolchain]
+channel = "1.99.0"
+components = ["rustfmt", "clippy"]

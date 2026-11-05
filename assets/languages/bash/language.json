@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "id": "bash",
+  "name": "Bourne Again Shell (bash)",
+  "scope": "source.shell",
+  "files": {
+    "extensions": ["sh", "bash"],
+    "names": [".bashrc", ".bash_profile", ".bash_login", ".profile"]
+  },
+  "comments": {
+    "line": "#"
+  },
+  "syntax": "builtin:Bourne Again Shell (bash)",
+  "tree_sitter": {
+    "grammar": "builtin:bash",
+    "highlights": ["builtin:bash/highlights"]
+  },
+  "lsp": {
+    "language_id": "shellscript",
+    "server": "bash",
+    "command": ["bash-language-server", "start"],
+    "initialization_options": {},
+    "root_markers": [".shellcheckrc", ".bash-language-server.json"]
+  }
+}

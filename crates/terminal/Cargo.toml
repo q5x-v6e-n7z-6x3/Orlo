@@ -1,0 +1,14 @@
+[package]
+name = "orlo-terminal"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "PTY sessions, shell input, and VT100 terminal state for Orlo"
+
+[dependencies]
+libc.workspace = true
+portable-pty.workspace = true
+vt100.workspace = true
+vte.workspace = true
+regex-automata.workspace = true
+regex-syntax.workspace = true

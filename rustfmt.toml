@@ -1,0 +1,3 @@
+# A denser layout: short chains, struct literals and argument lists stay on one line.
+max_width = 120
+use_small_heuristics = "Max"

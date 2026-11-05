@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "id": "csharp",
+  "name": "C#",
+  "scope": "source.cs",
+  "files": {
+    "extensions": ["cs", "csx"]
+  },
+  "comments": {
+    "line": "//",
+    "block": ["/*", "*/"]
+  },
+  "syntax": "builtin:C#",
+  "tree_sitter": {
+    "grammar": "builtin:csharp",
+    "highlights": ["builtin:csharp/highlights"]
+  },
+  "lsp": {
+    "language_id": "csharp",
+    "server": "csharp",
+    "command": ["csharp-ls"],
+    "initialization_options": {},
+    "root_markers": ["global.json", "Directory.Build.props", "Directory.Build.targets", "NuGet.Config", "nuget.config", "*.sln", "*.slnx", "*.csproj"]
+  }
+}

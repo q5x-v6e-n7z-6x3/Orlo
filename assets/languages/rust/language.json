@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "id": "rust",
+  "name": "Rust",
+  "scope": "source.rust",
+  "files": {
+    "extensions": ["rs"]
+  },
+  "comments": {
+    "line": "//",
+    "block": ["/*", "*/"]
+  },
+  "syntax": "builtin:Rust",
+  "tree_sitter": {
+    "grammar": "builtin:rust",
+    "highlights": ["queries/prelude.scm", "builtin:rust/highlights"]
+  },
+  "lsp": {
+    "language_id": "rust",
+    "server": "rust",
+    "command": ["rust-analyzer"],
+    "initialization_options": {},
+    "root_markers": ["Cargo.toml"]
+  }
+}

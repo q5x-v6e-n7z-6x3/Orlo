@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "id": "terraform",
+  "name": "HCL",
+  "hidden": true,
+  "scope": "source.hcl",
+  "files": {
+    "extensions": ["tf"]
+  },
+  "comments": {
+    "line": "#",
+    "block": ["/*", "*/"]
+  },
+  "tree_sitter": {
+    "grammar": "builtin:hcl",
+    "highlights": ["builtin:hcl/highlights"]
+  },
+  "lsp": {
+    "language_id": "terraform",
+    "server": "terraform",
+    "command": ["terraform-ls", "serve"],
+    "initialization_options": {},
+    "root_markers": [".terraform.lock.hcl", "main.tf", "terraform.tf"]
+  }
+}

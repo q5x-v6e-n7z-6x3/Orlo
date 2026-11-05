@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "id": "swift",
+  "name": "Swift",
+  "scope": "source.swift",
+  "files": {
+    "extensions": ["swift"]
+  },
+  "comments": {
+    "line": "//",
+    "block": ["/*", "*/"]
+  },
+  "tree_sitter": {
+    "grammar": "builtin:swift",
+    "highlights": ["builtin:swift/highlights"]
+  },
+  "lsp": {
+    "language_id": "swift",
+    "server": "swift",
+    "command": ["xcrun", "sourcekit-lsp"],
+    "initialization_options": {},
+    "root_markers": ["Package.swift", "compile_commands.json"]
+  }
+}

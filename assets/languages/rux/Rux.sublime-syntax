@@ -1,0 +1,215 @@
+%YAML 1.2
+---
+# Written for Orlo from the Rux lexer (rux-lang/Rux Compiler/Lexer) and Docs/Language.md; the
+# structure follows rux-lang/SublimeText and rux-lang/VSCode. See LICENSE. No file_extensions:
+# language.json claims `.rux` only for files that don't start with `<` (the Rux UI language).
+name: Rux
+scope: source.rux
+version: 2
+
+variables:
+  ident: '[A-Za-z_][A-Za-z0-9_]*'
+  width: '(?:8|16|32|64|128|256|512)'
+  int_suffix: '(?:[iu]{{width}}?)'
+  suffix: '(?:[iu]{{width}}?|f(?:8|16|32|64|80|128|256|512))'
+
+contexts:
+  prototype:
+    - include: comments
+
+  main:
+    - include: attributes
+    - include: declarations
+    - include: keywords
+    - include: types
+    - include: literals
+    - include: calls
+    - include: operators
+    - include: punctuation
+    - match: '{{ident}}'
+
+  comments:
+    - match: '///(?!/)'
+      scope: punctuation.definition.comment.rux
+      push: doc-line-comment
+    - match: '//'
+      scope: punctuation.definition.comment.rux
+      push: line-comment
+    - match: '/\*\*(?![*/])'
+      scope: punctuation.definition.comment.begin.rux
+      push: doc-block-comment
+    - match: '/\*'
+      scope: punctuation.definition.comment.begin.rux
+      push: block-comment
+
+  doc-line-comment:
+    - meta_include_prototype: false
+    - meta_scope: comment.line.documentation.rux
+    - match: '\n'
+      pop: true
+
+  line-comment:
+    - meta_include_prototype: false
+    - meta_scope: comment.line.double-slash.rux
+    - match: '\n'
+      pop: true
+
+  doc-block-comment:
+    - meta_include_prototype: false
+    - meta_scope: comment.block.documentation.rux
+    - include: block-comment-body
+
+  block-comment:
+    - meta_include_prototype: false
+    - meta_scope: comment.block.rux
+    - include: block-comment-body
+
+  # comments nest: every `/*` inside one opens another level
+  block-comment-body:
+    - match: '\*/'
+      scope: punctuation.definition.comment.end.rux
+      pop: true
+    - match: '/\*'
+      scope: punctuation.definition.comment.begin.rux
+      push: block-comment
+
+  attributes:
+    - match: '(#)[A-Z][A-Za-z0-9_]*'
+      scope: entity.other.attribute-name.rux
+      captures:
+        1: punctuation.definition.attribute.rux
+    - match: '(#)[a-z_][A-Za-z0-9_]*'
+      scope: variable.language.compile-time.rux
+      captures:
+        1: punctuation.definition.variable.rux
+
+  declarations:
+    - match: '\b(func)\s+(~?{{ident}})'
+      captures:
+        1: keyword.declaration.function.rux
+        2: entity.name.function.rux
+    - match: '\b(struct|enum|variant|union|interface)\s+({{ident}})'
+      captures:
+        1: keyword.declaration.type.rux
+        2: entity.name.type.rux
+    - match: '\b(type)\s+({{ident}})'
+      captures:
+        1: keyword.declaration.type.rux
+        2: entity.name.type.rux
+    - match: '\b(extend)\s+({{ident}})'
+      captures:
+        1: keyword.declaration.impl.rux
+        2: entity.name.impl.rux
+    - match: '\b(module)\s+({{ident}}(?:::{{ident}})*)'
+      captures:
+        1: keyword.declaration.module.rux
+        2: entity.name.namespace.rux
+
+  keywords:
+    - match: '\b(?:if|else|when|while|do|loop|for|break|continue|return|match|defer|try|catch|throw|fail|finally)\b'
+      scope: keyword.control.rux
+    - match: '\bimport\b'
+      scope: keyword.control.import.rux
+    - match: '\b(?:func|let|var|const|type|struct|enum|variant|union|interface|extend|module)\b'
+      scope: keyword.declaration.rux
+    - match: '\b(?:pub|extern|intrinsic|unsafe|throws|move)\b'
+      scope: storage.modifier.rux
+    - match: '\b(?:as|is|in)\b'
+      scope: keyword.operator.word.rux
+    - match: '\b(?:true|false|null|none)\b'
+      scope: constant.language.rux
+    - match: '\bself\b'
+      scope: variable.language.self.rux
+    # contextual words: keywords only where the language gives them a meaning
+    - match: '\b(?:asm|thread)\b(?=\s+(?:func|var)\b)'
+      scope: storage.modifier.rux
+    - match: '\b(?:sizeof|alignof)\b(?=\s*\()'
+      scope: keyword.operator.word.rux
+    - match: '\bSelf\b'
+      scope: storage.type.self.rux
+    - match: '(?<=\.)(?:Some|Success|Failure)\b'
+      scope: support.constant.rux
+
+  types:
+    - match: '\b(?:u?int{{width}}?|float(?:8|16|32|64|80|128|256|512)?|bool{{width}}?|char{{width}}?|byte|opaque)\b'
+      scope: support.type.rux
+
+  literals:
+    - match: '(?:\b(c8|c16|c32))?(")'
+      captures:
+        1: storage.type.string.rux
+        2: punctuation.definition.string.begin.rux
+      push: string
+    - match: '(?:\b(c8|c16|c32|c64|c128|c256|c512))?('')'
+      captures:
+        1: storage.type.string.rux
+        2: punctuation.definition.string.begin.rux
+      push: character
+    # a number after `.` is a tuple index, so `pair.0.1` is two accesses, not a float
+    - match: '(?<=\.)\d+\b'
+      scope: constant.numeric.integer.rux
+    - match: '\b0[xX][0-9A-Fa-f_]+({{int_suffix}})?\b'
+      scope: constant.numeric.hex.rux
+      captures:
+        1: constant.numeric.suffix.rux
+    - match: '\b0[oO][0-7_]+({{int_suffix}})?\b'
+      scope: constant.numeric.octal.rux
+      captures:
+        1: constant.numeric.suffix.rux
+    - match: '\b0[bB][01_]+({{int_suffix}})?\b'
+      scope: constant.numeric.binary.rux
+      captures:
+        1: constant.numeric.suffix.rux
+    - match: '\b\d[\d_]*(?:\.\d[\d_]*)?(?:[eE][+-]?\d[\d_]*)?({{suffix}})?\b'
+      scope: constant.numeric.decimal.rux
+      captures:
+        1: constant.numeric.suffix.rux
+
+  string:
+    - meta_include_prototype: false
+    - meta_scope: string.quoted.double.rux
+    - match: '"'
+      scope: punctuation.definition.string.end.rux
+      pop: true
+    - include: escapes
+    # strings end at the line's end; the compiler reports the missing quote
+    - match: '(?=\n)'
+      pop: true
+
+  character:
+    - meta_include_prototype: false
+    - meta_scope: string.quoted.single.rux
+    - match: ''''
+      scope: punctuation.definition.string.end.rux
+      pop: true
+    - include: escapes
+    - match: '(?=\n)'
+      pop: true
+
+  escapes:
+    - match: '\\(?:[ntrabfv0\\''"]|u\{[0-9A-Fa-f]{1,8}\})'
+      scope: constant.character.escape.rux
+    - match: '\\.?'
+      scope: invalid.illegal.escape.rux
+
+  calls:
+    - match: '{{ident}}(?=\s*(?:<[^<>()]*>)?\s*\()'
+      scope: variable.function.rux
+
+  operators:
+    - match: '->|=>|\?\?|\.\.[.=]?|<<=?|>>>?=?|&&|\|\||\+\+|--|[-+*]%=?|[-+*/%&|^<>!=]=?|[~?@]'
+      scope: keyword.operator.rux
+
+  punctuation:
+    - match: '::'
+      scope: punctuation.accessor.rux
+    - match: '\.'
+      scope: punctuation.accessor.rux
+    - match: ';'
+      scope: punctuation.terminator.rux
+    - match: ','
+      scope: punctuation.separator.rux
+    - match: ':'
+      scope: punctuation.separator.type.rux
+    - match: '[{}()\[\]]'
+      scope: punctuation.section.rux

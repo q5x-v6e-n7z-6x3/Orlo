@@ -1,0 +1,26 @@
+[package]
+name = "orlo-app"
+version = "0.1.0"
+edition = "2021"
+description = "The Orlo desktop editor application"
+license = "MIT"
+
+[[bin]]
+name = "Orlo"
+path = "src/main.rs"
+
+[dependencies]
+orlo-ui = { path = "../ui" }
+orlo-utils = { path = "../utils" }
+gpui.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true
+
+[[test]]
+name = "cli"
+path = "../../tests/integration/cli.rs"
+
+[[test]]
+name = "signals"
+path = "../../tests/integration/signals.rs"

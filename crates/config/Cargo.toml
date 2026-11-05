@@ -1,0 +1,22 @@
+[package]
+name = "orlo-config"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Settings, keymaps, themes, scoped preferences, and automation configuration for Orlo"
+
+[features]
+test-support = ["orlo-utils/test-support"]
+
+[dependencies]
+gpui.workspace = true
+libc.workspace = true
+regex-automata.workspace = true
+regex-syntax.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+syntect.workspace = true
+orlo-utils = { path = "../utils" }
+
+[dev-dependencies]
+orlo-utils = { path = "../utils", features = ["test-support"] }

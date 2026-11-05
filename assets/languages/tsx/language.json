@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "id": "tsx",
+  "name": "TypeScript (TSX)",
+  "scope": "source.tsx",
+  "files": {
+    "extensions": ["tsx"]
+  },
+  "comments": {
+    "line": "//",
+    "block": ["/*", "*/"]
+  },
+  "syntax": "builtin:JavaScript",
+  "tree_sitter": {
+    "grammar": "builtin:tsx",
+    "highlights": ["builtin:javascript/highlights", "builtin:javascript/jsx", "builtin:typescript/highlights"]
+  },
+  "lsp": {
+    "language_id": "typescriptreact",
+    "server": "typescript",
+    "command": ["typescript-language-server", "--stdio"],
+    "initialization_options": {},
+    "root_markers": ["tsconfig.json", "jsconfig.json", "package.json"]
+  }
+}

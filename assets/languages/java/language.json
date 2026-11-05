@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "id": "java",
+  "name": "Java",
+  "scope": "source.java",
+  "files": {
+    "extensions": ["java"]
+  },
+  "comments": {
+    "line": "//",
+    "block": ["/*", "*/"]
+  },
+  "syntax": "builtin:Java",
+  "tree_sitter": {
+    "grammar": "builtin:java",
+    "highlights": ["builtin:java/highlights"]
+  },
+  "lsp": {
+    "language_id": "java",
+    "server": "java",
+    "command": ["jdtls"],
+    "initialization_options": {},
+    "root_markers": ["settings.gradle.kts", "settings.gradle", "build.gradle.kts", "build.gradle", "pom.xml"]
+  }
+}

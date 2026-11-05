@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "id": "hcl",
+  "name": "HCL",
+  "scope": "source.hcl",
+  "files": {
+    "extensions": ["hcl"]
+  },
+  "comments": {
+    "line": "#",
+    "block": ["/*", "*/"]
+  },
+  "tree_sitter": {
+    "grammar": "builtin:hcl",
+    "highlights": ["builtin:hcl/highlights"]
+  },
+  "lsp": {
+    "language_id": "hcl",
+    "server": "hcl",
+    "initialization_options": {},
+    "root_markers": []
+  }
+}

@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Validation needs no repository writes or other token capabilities.
+permissions:
+  contents: read
+
+# a newer push to a PR cancels the run it outdates; every push to main is checked
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  check:
+    runs-on: macos-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      # the version rust-toolchain.toml pins, with its components
+      - run: rustup toolchain install
+      # tree-sitter's wasm feature builds wasmtime's C API with cmake
+      - run: command -v cmake || brew install cmake
+      - uses: Swatinem/rust-cache@e9d7b9f1e587218970671bac74e5511ed9506e6a # v2
+      - run: cargo fmt --all -- --check
+      # fails on a RustSec vulnerability in Cargo.lock; unmaintained/unsound notices only warn
+      - run: cargo install cargo-audit --locked && cargo audit
+      - run: cargo clippy --workspace --locked --all-targets -- -D warnings
+      # the whole log is kept when a test fails: downloadable from the run's page
+      - run: |
+          set -o pipefail
+          cargo test --workspace --locked 2>&1 | tee test.log
+      - if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: test-log
+          path: test.log
+      # the thin-LTO release profile the app ships with
+      - run: cargo build --workspace --locked --release
+      # every bundled language and the contributor template load and activate as Orlo runs them
+      # (`*/`: folders only, not assets/languages/README.md)
+      - run: target/release/Orlo --check-language assets/languages/*/ docs/templates/example-language
